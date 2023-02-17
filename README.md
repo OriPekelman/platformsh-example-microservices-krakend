@@ -16,7 +16,7 @@ Apps: frontend, golang-service, java-service, keycloack, nodejs-service, nodejs-
 
 ## Notes:
 
-* The configuration of the internal routing of the gateway is in `krakend/krakend.json` but again, this is just a toy. In real life our Router has enough functionality to actually replace it.
+* The configuration of the internal routing of the gateway is in `krakend/krakend.json` but again, this is just a toy. In real life our *Router* could actually have enough functionality to replace it if all you need is routing and caching.
 * We have sprinkled some relationships between apps and services so it could be demosntrated that inter-service routing is opt-in.
 * In this example we put everything in a single Yaml file. But there are other options such as putting a `.platform.app.yaml` in the root of each app. 
 
