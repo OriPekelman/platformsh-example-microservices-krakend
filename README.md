@@ -14,13 +14,11 @@ In `.platform/applications.yaml`:
 
 Apps: frontend, golang-service, java-service, keycloack, nodejs-service, nodejs-service-gateway, python-service, vault, python_queue_handler, go_queue_handler
 
-Notes:
+## Notes:
 
-    The configuration of the internal routing of the gateway is in `nodejs-service-gateway/config/gateway.config.yml` but again, this is just a toy. In real life I am not at all sure this component will be needed. Potentially our Router has (or could have) enough functionality to actually replace it.
-
-    We have sprinkled some relationships between apps and services so it could be demosntrated that inter-service routing is opt-in.
-
-    In this example we put everything in a single Yaml file. But there are other options such as putting a `.platform.app.yaml` in the root of each app. 
+* The configuration of the internal routing of the gateway is in `krakend/krakend.json` but again, this is just a toy. In real life our Router has enough functionality to actually replace it.
+* We have sprinkled some relationships between apps and services so it could be demosntrated that inter-service routing is opt-in.
+* In this example we put everything in a single Yaml file. But there are other options such as putting a `.platform.app.yaml` in the root of each app. 
 
 In `.platform/services.yaml`: 
 
