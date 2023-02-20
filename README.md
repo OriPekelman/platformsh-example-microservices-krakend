@@ -1,4 +1,4 @@
-# Platform.sh MicroServices Example with a KrakenD gateway a Vault instance and a Keycloack instance
+# Platform.sh MicroServices Example with a KrakenD gateway a Vault instance and a Keycloak instance
 
 This example is for learning purposes only and is not intended as a starting point for an actual production instance. 
 
@@ -12,7 +12,7 @@ In `.platform/applications.yaml`:
 * And we have added two worker instances - one in Python and one in Go - these do nothing actually (their start command is simply `sleep`) - but they show more topological options
 * For added realism we also introduce a network storage instance accessible by the Python and Golang apps and workers
 
-Apps: frontend, golang-service, java-service, keycloack, nodejs-service, nodejs-service-gateway, python-service, vault, python_queue_handler, go_queue_handler
+Apps: frontend, golang-service, java-service, keycloak, nodejs-service, nodejs-service-gateway, python-service, vault, python_queue_handler, go_queue_handler
 
 ## Notes:
 
@@ -22,12 +22,12 @@ Apps: frontend, golang-service, java-service, keycloack, nodejs-service, nodejs-
 
 In `.platform/services.yaml`: 
 
-There are two databases: One a postgres to serve the microservices (as an example it is configured with two different schemas - and three "endpoints" or roles - admin, reporter and importer), and one MariaDB for Keycloack.
+There are two databases: One a postgres to serve the microservices (as an example it is configured with two different schemas - and three "endpoints" or roles - admin, reporter and importer), and one MariaDB for Keycloak.
 
-Services: dbpostgres, keycloack-database
+Services: dbpostgres, keycloak-database
 
 And in `.platform/routes.yaml`: 
 
-We expose public routes for the Frontend, the API gateway as well as for Vault and Keycloack.
-Routes: "https://{default}/", "https://api.{default}/", "https://keycloack.{default}", "https://vault.{default}/"
+We expose public routes for the Frontend, the API gateway as well as for Vault and Keycloak.
+Routes: "https://{default}/", "https://api.{default}/", "https://keycloak.{default}", "https://vault.{default}/"
 
